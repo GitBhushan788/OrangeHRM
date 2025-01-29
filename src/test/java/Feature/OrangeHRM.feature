@@ -24,3 +24,8 @@ Feature: Test OrangeHRM Application
     And user select marrital status "Married"
     And user select gender
     Then click on MoreDetailsSave button
+
+    Scenario: Search employee in PIM page
+    Given user click on Employee List
+    When user enter employeeId
+    Then user click on search button

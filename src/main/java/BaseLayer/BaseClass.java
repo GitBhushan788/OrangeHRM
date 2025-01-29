@@ -9,8 +9,8 @@ public class BaseClass {
 	protected static WebDriver driver;
 	public static void initialization() {
 		driver = new ChromeDriver();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(45));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	}

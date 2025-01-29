@@ -112,7 +112,7 @@ public class Step extends BaseClass {
 		// driver.findElement(By.xpath("//label[text()='Other
 		// Id']/parent::div/following-sibling::div/child::input")).sendKeys(first);
 		WebElement wb = driver.findElement(By.xpath(
-				"//label[text()='Nationality']/parent::div/following-sibling::div/descendant::div/child::div/child::div[@class='oxd-select-text-input']"));
+				"//label[text()='Nationality']/parent::div/following-sibling::div/descendant::div/child::div/descendant::i"));
 		wb.click();
 		List<WebElement> ls = driver.findElements(By.xpath("//div[@class='oxd-select-option']"));
 		for (WebElement a : ls) {
@@ -160,4 +160,23 @@ public class Step extends BaseClass {
 		driver.quit();
 	}
 
+	@Given("user click on Employee List")
+	public void user_click_on_employee_list() {
+	     driver.findElement(By.xpath("//a[text()='Employee List']")).click();
+	      
+	}
+
+	@When("user enter employeeId")
+	public void user_enter_employee_id() {
+	     driver.findElement(By.xpath("//label[text()='Employee Id']/parent::div/following-sibling::div/child::input")).sendKeys(EmployeeId);
+	      
+	}
+
+	@Then("user click on search button")
+	public void user_click_on_search_button() {
+	     driver.findElement(By.xpath("//button[text()=' Search ']")).click();
+	      
+	}
+	
+	
 }
